@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f37121;
+}
+
+.leader {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+.leader img {
+  width: 200px;
+  height: 50px;
+}
+
+.name {
+  display: flex;
+  justify-content: space-between;
+  width: 32%;
+  left: 34%;
+  top: 120px;
+  position: absolute;
+}
+.name .nick img {
+  width: 90px;
+  height: 30px;
+}
+.name .top img {
+  width: 65px;
+  height: 30px;
+}
+.name .rang img {
+  width: 65px;
+  height: 30px;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+}
+.main .block {
+  margin-top: 100px;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Libre Franklin", sans-serif;
+}
+.main .block .line {
+  margin: 10px;
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.7);
+  width: 70%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-size: 20px;
+  overflow: hidden;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.main .block .line:hover {
+  color: #000;
+}
+.main .block .line .span_top {
+  padding: 13px;
+  width: 70px;
+  text-align: center;
+  position: absolute;
+  left: 20px;
+}
+.main .block .line .span_top:after {
+  content: " ";
+  width: 5px;
+  height: 40px;
+  display: inline-block;
+  position: absolute;
+  right: 0px;
+  top: 5px;
+  border-radius: 3px;
+  background-color: #81e462;
+}
+.main .block .line .span_name {
+  text-align: center;
+  position: absolute;
+  width: 300px;
+  padding: 13px;
+}
+.main .block .line .span_rang {
+  text-align: center;
+  position: absolute;
+  width: 70px;
+  padding: 13px;
+  right: 20px;
+}
+.main .block .line .span_rang:after {
+  content: " ";
+  width: 5px;
+  height: 40px;
+  display: inline-block;
+  position: absolute;
+  left: 0px;
+  top: 5px;
+  border-radius: 3px;
+  background-color: #81e462;
+}
