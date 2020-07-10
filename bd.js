@@ -63,6 +63,12 @@ const crowboybg = `
             <div class="number_of_damage">Кількість урону - 92</div>
             <div class="regime">Режим - Сквад</div>
 </div>
+<div class="container">
+<div class="date_game">Дата гри - 08.07.2020</div>
+<div class="number_of_kills">Кількість кілів - 2</div>
+<div class="number_of_damage">Кількість урону - 170</div>
+<div class="regime">Режим - Сквад</div>
+</div>
 `;
 // 
 const monsterbg = `
@@ -629,6 +635,12 @@ const yinyangbg = `
                 <div class="number_of_damage">Кількість урону - 1594</div>
                 <div class="regime">Режим - Сквад</div>
     </div>
+    <div class="container">
+    <div class="date_game">Дата гри - 08.07.2020</div>
+    <div class="number_of_kills">Кількість кілів - 2</div>
+    <div class="number_of_damage">Кількість урону - 719</div>
+    <div class="regime">Режим - Сквад</div>
+</div>
     `;
 // 
 const ninjabg = `
@@ -661,6 +673,12 @@ const bsmonsterbg = `
                 <div class="number_of_damage">Кількість урону - Невідомо</div>
                 <div class="regime">Режим - Сквад</div>
     </div>
+    <div class="container">
+    <div class="date_game">Дата гри - 08.07.2020</div>
+    <div class="number_of_kills">Кількість кілів - 1</div>
+    <div class="number_of_damage">Кількість урону - 85</div>
+    <div class="regime">Режим - Сквад</div>
+</div>
     `;
 // 
 const artemiysexbg = `
@@ -753,6 +771,12 @@ const likebg = `
                 <div class="number_of_damage">Кількість урону - Невідомо</div>
                 <div class="regime">Режим - Сквад</div>
     </div>
+    <div class="container">
+                <div class="date_game">Дата гри - 05.07.2020</div>
+                <div class="number_of_kills">Кількість кілів - 2</div>
+                <div class="number_of_damage">Кількість урону - Невідомо</div>
+                <div class="regime">Режим - Сквад</div>
+    </div>
     `;
 // 
 const punkbg = `
@@ -769,6 +793,12 @@ const punkbg = `
                 <div class="number_of_damage">Кількість урону - Невідомо</div>
                 <div class="regime">Режим - Сквад</div>
     </div>
+    <div class="container">
+    <div class="date_game">Дата гри - 05.07.2020</div>
+    <div class="number_of_kills">Кількість кілів - 2</div>
+    <div class="number_of_damage">Кількість урону - Невідомо</div>
+    <div class="regime">Режим - Сквад</div>
+</div>
     `;
 // 
 const tonyabg = `
@@ -807,7 +837,78 @@ const angelbg = `
     </div>
     `;
 // 
+const univPbg = `
+    <img src="close.png" alt="" class="close">
+    <div class="container">
+    <div class="date_game">Дата гри - 05.07.2020</div>
+    <div class="number_of_kills">Кількість кілів - 4</div>
+    <div class="number_of_damage">Кількість урону - Невідомо</div>
+    <div class="regime">Режим - Сквад</div>
+</div>
+<div class="container">
+    <div class="date_game">Дата гри - 07.07.2020</div>
+    <div class="number_of_kills">Кількість кілів - 0</div>
+    <div class="number_of_damage">Кількість урону - Невідомо</div>
+    <div class="regime">Режим - Сквад</div>
+</div>
+    `;
 // 
+const univKbg = `
+    <img src="close.png" alt="" class="close">
+    <div class="container">
+    <div class="date_game">Дата гри - 07.07.2020</div>
+    <div class="number_of_kills">Кількість кілів - 13</div>
+    <div class="number_of_damage">Кількість урону - Невідомо</div>
+    <div class="regime">Режим - Сквад</div>
+</div>
+    `;
 // 
+const univMbg = `
+    <img src="close.png" alt="" class="close">
+    <div class="container">
+    <div class="date_game">Дата гри - 07.07.2020</div>
+    <div class="number_of_kills">Кількість кілів - 0</div>
+    <div class="number_of_damage">Кількість урону - Невідомо</div>
+    <div class="regime">Режим - Сквад</div>
+</div>
+    `;
 // 
+const univFbg = `
+    <img src="close.png" alt="" class="close">
+    <div class="container">
+    <div class="date_game">Дата гри - 07.07.2020</div>
+    <div class="number_of_kills">Кількість кілів - 4</div>
+    <div class="number_of_damage">Кількість урону - Невідомо</div>
+    <div class="regime">Режим - Сквад</div>
+</div>
+    `;
 // 
+const hatsbg = `
+    <img src="close.png" alt="" class="close">
+    <div class="container">
+    <div class="date_game">Дата гри - 08.07.2020</div>
+    <div class="number_of_kills">Кількість кілів - 2</div>
+    <div class="number_of_damage">Кількість урону - 188</div>
+    <div class="regime">Режим - Сквад</div>
+</div>
+    `;
+// 
+const pandabg = `
+    <img src="close.png" alt="" class="close">
+    <div class="container">
+    <div class="date_game">Дата гри - 08.07.2020</div>
+    <div class="number_of_kills">Кількість кілів - 3</div>
+    <div class="number_of_damage">Кількість урону - Невідомо</div>
+    <div class="regime">Режим - Дуо</div>
+</div>
+    `;
+// 
+const sherlokbg = `
+    <img src="close.png" alt="" class="close">
+    <div class="container">
+    <div class="date_game">Дата гри - 08.07.2020</div>
+    <div class="number_of_kills">Кількість кілів - Невідомо</div>
+    <div class="number_of_damage">Кількість урону - Невідомо</div>
+    <div class="regime">Режим - Сквад</div>
+</div>
+    `;

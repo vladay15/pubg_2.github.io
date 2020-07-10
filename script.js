@@ -1,3 +1,10 @@
+var items = $('.block ul li');
+        items.sort(function(a, b){
+            return +$(a).data('time') - +$(b).data('time');
+});
+
+items.appendTo('ul');
+// 
 document.querySelectorAll('.order').forEach((element)=>{
     element.onclick = orderFunction;
 });
@@ -10,13 +17,11 @@ function orderFunction(){
     if(this.value == "first"){
         block.style.display = 'flex';
         block2.style.display = 'none';
-        second.checked == false;
         return true;
     }
     if(this.value == "second"){
         block2.style.display = 'flex';
         block.style.display = 'none';
-        first.checked == false;
         return true;
     }
 }
@@ -192,5 +197,47 @@ let angel = document.querySelector('.angel');
 angel.addEventListener('click',()=>{
     statistics.style.display = 'flex';
     statistics.innerHTML = angelbg;
+    cross();
+});
+let univP = document.querySelector('.univP');
+univP.addEventListener('click',()=>{
+    statistics.style.display = 'flex';
+    statistics.innerHTML = univPbg;
+    cross();
+});
+let univK = document.querySelector('.univK');
+univK.addEventListener('click',()=>{
+    statistics.style.display = 'flex';
+    statistics.innerHTML = univKbg;
+    cross();
+});
+let univF = document.querySelector('.univF');
+univF.addEventListener('click',()=>{
+    statistics.style.display = 'flex';
+    statistics.innerHTML = univFbg;
+    cross();
+});
+let univM = document.querySelector('.univM');
+univM.addEventListener('click',()=>{
+    statistics.style.display = 'flex';
+    statistics.innerHTML = univMbg;
+    cross();
+});
+let hats = document.querySelector('.hats');
+hats.addEventListener('click',()=>{
+    statistics.style.display = 'flex';
+    statistics.innerHTML = hatsbg;
+    cross();
+});
+let panda = document.querySelector('.panda');
+panda.addEventListener('click',()=>{
+    statistics.style.display = 'flex';
+    statistics.innerHTML = pandabg;
+    cross();
+});
+let sherlok = document.querySelector('.sherlok');
+sherlok.addEventListener('click',()=>{
+    statistics.style.display = 'flex';
+    statistics.innerHTML = sherlokbg;
     cross();
 });
