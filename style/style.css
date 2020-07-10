@@ -231,9 +231,6 @@ input[type="radio"]:checked + label::before{
   background-color: #81e462;
 }
 @media screen and (max-width: 1160px) {
-  .main .line {
-    width: 100%;
-  }
   .name {
     display: flex;
     justify-content: space-between;
@@ -257,6 +254,9 @@ input[type="radio"]:checked + label::before{
 @media screen and (max-width: 430px) {
   .box{
     width: 100%;
+  }
+  .line:before{
+    left: -20px;
   }
   label{
     font-size: 100%;
