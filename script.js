@@ -4,6 +4,44 @@ var items = $('.block ul li');
 });
 
 items.appendTo('ul');
+// Search
+document.querySelector('#elastic').oninput = function () {
+    let val = this.value.trim();
+    let elasticItems = document.querySelectorAll('.block ul li');
+    if (val != '') {
+        elasticItems.forEach(function (elem) {
+            if (elem.innerText.search(val) == -1) {
+                elem.classList.add('hide');
+            }
+            else {
+                elem.classList.remove('hide');
+            }
+        });
+    }
+    else {
+        elasticItems.forEach(function (elem) {
+            elem.classList.remove('hide');
+        });
+    }
+};
+
+// 
+// document.querySelectorAll('.line').forEach((element)=>{
+//     element.onclick = attFunc;
+// });
+// function attFunc(){
+//     let target = this.getAttribute('data-time');
+//     let setA = prompt('Нове значення: ');
+//     console.log('Старе значення: '+ target);
+//     target = this.removeAttribute('data-time');
+//     target = this.setAttribute('data-time',setA);
+//     console.log('Нове значення: '+ setA);
+//     localStorage.setItem('number',setA.toString());
+//     if(localStorage.getItem('number')!==null){
+//         let num = localStorage.getItem('number');
+//         document.querySelector('.line').setAttribute('data-time',num);
+//     }
+// };
 // 
 document.querySelectorAll('.order').forEach((element)=>{
     element.onclick = orderFunction;

@@ -18,6 +18,7 @@ body {
   align-items: center;
   height: 50px;
   width: 500px;
+  top: 100px;
 }
 input[type="radio"]{
   display: none;
@@ -41,7 +42,7 @@ label::before{
   border-radius: 50%;
 }
 input[type="radio"]:checked + label::before{
-  background-image: url(correct.png);
+  background-image: url('../correct.png');
   background-size: 100%;
 }
 .leader {
@@ -53,6 +54,26 @@ input[type="radio"]:checked + label::before{
   width: 200px;
   height: 50px;
 }
+/* search */
+.search{
+  width: 100%;
+  height: 35px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search input{
+  width: 500px;
+  height: 30px;
+  border-radius: 3px;
+  font-weight: bold;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  border: none;
+  padding: 5px;
+  color: rgb(14, 71, 24);
+}
+
 /* statistics */
 .statistics{
   display: none;
@@ -64,6 +85,7 @@ input[type="radio"]:checked + label::before{
   background-color: #e3fdfd;
   border-radius: 5px;
   width: 50%;
+  min-height: 400px;
   /* height: 85%; */
   flex-wrap: wrap;
   box-shadow: 0 0 20px #71c9ce;
@@ -117,7 +139,7 @@ input[type="radio"]:checked + label::before{
   justify-content: space-between;
   width: 32%;
   left: 34%;
-  top: 120px;
+  top: 150px;
   position: absolute;
 }
 .name .nick img {
@@ -138,7 +160,7 @@ input[type="radio"]:checked + label::before{
   justify-content: center;
 }
 .main .block{
-  margin-top: 100px;
+  margin-top: 120px;
   width: 50%;
   height: 100%;
   display: flex;
@@ -156,6 +178,9 @@ input[type="radio"]:checked + label::before{
   flex-direction: column;
   align-items: center;
   font-family: "Libre Franklin", sans-serif;
+  display: none;
+}
+.main .line.hide{
   display: none;
 }
 .main .line {
@@ -236,23 +261,36 @@ input[type="radio"]:checked + label::before{
     justify-content: space-between;
     width: 50%;
     left: 25%;
-    top: 120px;
+    top: 150px;
     position: absolute;
   }
 }
 @media screen and (max-width: 750px) {
+  .search input{
+    width: 90%;
+  }
+  .box{
+    margin-top: 20px;
+  }
   .main .line {
     width: 400px;
   }
   .main {
     margin-top: 30px;
   }
+  .main .block{
+    margin-top: 70px;
+  }
   .main .name{
     display: none;
   }
 }
 @media screen and (max-width: 430px) {
+  .search input{
+    width: 80%;
+  }
   .box{
+    margin-top: 20px;
     width: 100%;
   }
   .line:before{
@@ -272,7 +310,7 @@ input[type="radio"]:checked + label::before{
     right: -40px;
   }
   .main .block{
-    margin-top: 40px;
+    margin-top: 70px;
   }
   .main .line {
     width: 280px;

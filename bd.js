@@ -495,6 +495,12 @@ const vladaybg = `
             <div class="number_of_damage">Кількість урону - 441</div>
             <div class="regime">Режим - Сквад</div>
 </div>
+<div class="container">
+            <div class="date_game">Дата гри - 11.07.2020</div>
+            <div class="number_of_kills">Кількість кілів - 1</div>
+            <div class="number_of_damage">Кількість урону - 159</div>
+            <div class="regime">Режим - Дуо</div>
+</div>
 `;
 // 
 const kr7bg = `
@@ -618,6 +624,12 @@ const kr7bg = `
             <div class="number_of_kills">Кількість кілів - 1</div>
             <div class="number_of_damage">Кількість урону - 462</div>
             <div class="regime">Режим - Сквад</div>
+</div>
+<div class="container">
+            <div class="date_game">Дата гри - 11.07.2020</div>
+            <div class="number_of_kills">Кількість кілів - 3</div>
+            <div class="number_of_damage">Кількість урону - 347</div>
+            <div class="regime">Режим - Дуо</div>
 </div>
 `;
 // 
