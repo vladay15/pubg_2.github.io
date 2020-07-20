@@ -29,20 +29,18 @@ var checkbox = document.querySelector('input[name=theme]');
 
 checkbox.addEventListener('change', function() {
     if(this.checked) {
-        trans()
-        document.documentElement.setAttribute('data-theme', 'dark')
+        document.documentElement.setAttribute('data-theme', 'dark');
     } else {
-        trans()
-        document.documentElement.setAttribute('data-theme', 'light')
+        document.documentElement.setAttribute('data-theme', 'light');
     }
 });
 
-let trans = () => {
-    document.documentElement.classList.add('transition');
-    window.setTimeout(() => {
-        document.documentElement.classList.remove('transition')
-    }, 1000)
-};
+// let trans = () => {
+//     document.documentElement.classList.add('transition');
+//     window.setTimeout(() => {
+//         document.documentElement.classList.remove('transition')
+//     }, 1000)
+// };
 // scroll
 window.onload = function() {
     var scrolled;

@@ -30,13 +30,6 @@ html[data-theme='dark']{
   --stat-color:#333333;
   --back-dl:rgba(0,0,0,0.7);
 }
-html.transition,
-html.transition *,
-html.transition *:before,
-html.transition *:after {
-  transition: all 750ms !important;
-  transition-delay: 0 !important;
-}
 .back{
   width: 100%;
   height: 100%;
