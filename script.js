@@ -24,7 +24,25 @@ document.querySelector('#elastic').oninput = function () {
         });
     }
 };
+//theme 
+var checkbox = document.querySelector('input[name=theme]');
 
+checkbox.addEventListener('change', function() {
+    if(this.checked) {
+        trans()
+        document.documentElement.setAttribute('data-theme', 'dark')
+    } else {
+        trans()
+        document.documentElement.setAttribute('data-theme', 'light')
+    }
+});
+
+let trans = () => {
+    document.documentElement.classList.add('transition');
+    window.setTimeout(() => {
+        document.documentElement.classList.remove('transition')
+    }, 1000)
+};
 // 
 // document.querySelectorAll('.line').forEach((element)=>{
 //     element.onclick = attFunc;
@@ -53,11 +71,13 @@ function orderFunction(){
     let second = document.querySelector('.order[value="second"]');
     // console.log(this.value);
     if(this.value == "first"){
+        trans();
         block.style.display = 'flex';
         block2.style.display = 'none';
         return true;
     }
     if(this.value == "second"){
+        trans();
         block2.style.display = 'flex';
         block.style.display = 'none';
         return true;
