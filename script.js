@@ -43,7 +43,27 @@ let trans = () => {
         document.documentElement.classList.remove('transition')
     }, 1000)
 };
-// 
+// scroll
+window.onload = function() {
+    var scrolled;
+    var timer;
+  
+    document.getElementById("scroll").onclick = function() {
+      scrolled = window.pageYOffset;
+      scrollToTop();
+    };
+    function scrollToTop() {
+      if (scrolled > 0) {
+        window.scrollTo(0, scrolled);
+        scrolled = scrolled - 50;
+        timer = setTimeout(scrollToTop, 10);
+      } else {
+        clearTimeout(timer);
+        window.scrollTo(0, 0);
+      }
+    }
+  };
+
 // document.querySelectorAll('.line').forEach((element)=>{
 //     element.onclick = attFunc;
 // });

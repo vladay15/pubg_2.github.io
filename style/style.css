@@ -18,6 +18,7 @@ html{
   --top-color:#81e462;
   --hover-color:#000;
   --stat-color:#e3fdfd;
+  --back-dl:rgba(0,0,0,0.3);
 }
 html[data-theme='dark']{
   --line:#333333;
@@ -27,6 +28,7 @@ html[data-theme='dark']{
   --top-color:rgb(147, 105, 172);
   --hover-color:rgb(135, 137, 235);
   --stat-color:#333333;
+  --back-dl:rgba(0,0,0,0.7);
 }
 html.transition,
 html.transition *,
@@ -41,11 +43,30 @@ html.transition *:after {
   position: fixed;
   z-index: -10;
 }
+.scroll{
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: var(--line-text);
+  font-weight: bold;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: var(--color-headings);
+}
+.scroll:hover{
+  color: var(--hover-color);
+}
 .back img{
   position: absolute;
-  width: 100vw;
-  height: 100vh;
-  top: -60px;
+  top: -100px;
+  left: -100px;
+  background-repeat: no-repeat;
 }
 .back:after{
   content: '';
@@ -53,7 +74,7 @@ html.transition *:after {
   height: 100%;
   position: absolute;
   top: -60px;
-  background-color: rgba(0,0,0,0.5);
+  background-color: var(--back-dl);
 }
 .box{
   position: absolute;
@@ -68,7 +89,7 @@ html.transition *:after {
 /* dark-btn */
 .dark_light{
   position: fixed;
-  right: 30px;
+  left: 30px;
   bottom: 30px;
 }
 .dark_light input[type=checkbox]{
@@ -79,7 +100,6 @@ html.transition *:after {
 
 .dark_light label {
 	cursor: pointer;
-	text-indent: -9999px;
 	width: 52px;
 	height: 27px;
 	background: grey;
@@ -97,7 +117,6 @@ html.transition *:after {
 	height: 20px;
 	background: #fff;
 	border-radius: 90px;
-	transition: 0.3s;
 }
 
 .dark_light input:checked + label {
@@ -107,10 +126,6 @@ html.transition *:after {
 .dark_light input:checked + label:after {
 	left: calc(100% - 5px);
 	transform: translateX(-100%);
-}
-
-.dark_light label:active:after {
-	width: 45px;
 }
 /* face */
 .box input[type="radio"]{
@@ -176,7 +191,7 @@ html.transition *:after {
   align-items: center;
   justify-content: center; 
   position: absolute; 
-  z-index: 100;
+  z-index: 18;
   background-color: var(--stat-color);
   border-radius: 5px;
   width: 80%;
@@ -269,7 +284,7 @@ html.transition *:after {
   font-family: "Libre Franklin", sans-serif;
 }
 .main .block2 {
-  margin-top: 125px;
+  margin-top: 70px;
   width: 50%;
   height: 100%;
   display: flex;
@@ -364,9 +379,26 @@ html.transition *:after {
   }
 }
 @media screen and (max-width: 750px) {
+  .bottom_line{
+    height: 40px;
+    width: 100%;
+    background-color: var(--line);
+    position: fixed;
+    bottom: 0;
+    z-index: 20;
+  }
   .dark_light{
-    transform: rotate(90deg);
-    right: -15px;
+    z-index: 20;
+    bottom: 5px;
+  }
+  .dark_light label{
+    width: 100px;
+  }
+  .scroll{
+    height: 30px;
+    width: 80px;
+    bottom: 5px;
+    right: 40px;
     z-index: 20;
   }
   .search input{
