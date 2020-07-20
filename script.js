@@ -1,13 +1,23 @@
-var items = $('.block ul li');
+document.body.onload = ()=>{
+    // preloader
+    setTimeout(()=>{
+        let preloader = document.querySelector('#page-preloader');
+        if(!preloader.classList.contains('done')){
+            preloader.classList.add('done');
+        }
+    },1000);
+
+// sort
+var items = $('.first_face ul li');
         items.sort(function(a, b){
             return +$(a).data('time') - +$(b).data('time');
 });
 
-items.appendTo('ul');
+items.appendTo('.list_block');
 // Search
 document.querySelector('#elastic').oninput = function () {
     let val = this.value.trim();
-    let elasticItems = document.querySelectorAll('.block ul li');
+    let elasticItems = document.querySelectorAll('ul li');
     if (val != '') {
         elasticItems.forEach(function (elem) {
             if (elem.innerText.search(val) == -1) {
@@ -29,20 +39,21 @@ var checkbox = document.querySelector('input[name=theme]');
 
 checkbox.addEventListener('change', function() {
     if(this.checked) {
+        trans();
         document.documentElement.setAttribute('data-theme', 'dark');
     } else {
+        trans();
         document.documentElement.setAttribute('data-theme', 'light');
     }
 });
 
-// let trans = () => {
-//     document.documentElement.classList.add('transition');
-//     window.setTimeout(() => {
-//         document.documentElement.classList.remove('transition')
-//     }, 1000)
-// };
+let trans = () => {
+    document.documentElement.classList.add('transition');
+    window.setTimeout(() => {
+        document.documentElement.classList.remove('transition')
+    }, 1000)
+};
 // scroll
-window.onload = function() {
     var scrolled;
     var timer;
   
@@ -53,31 +64,15 @@ window.onload = function() {
     function scrollToTop() {
       if (scrolled > 0) {
         window.scrollTo(0, scrolled);
-        scrolled = scrolled - 50;
+        scrolled = scrolled - 150;
         timer = setTimeout(scrollToTop, 10);
       } else {
         clearTimeout(timer);
         window.scrollTo(0, 0);
       }
     }
-  };
 
-// document.querySelectorAll('.line').forEach((element)=>{
-//     element.onclick = attFunc;
-// });
-// function attFunc(){
-//     let target = this.getAttribute('data-time');
-//     let setA = prompt('Нове значення: ');
-//     console.log('Старе значення: '+ target);
-//     target = this.removeAttribute('data-time');
-//     target = this.setAttribute('data-time',setA);
-//     console.log('Нове значення: '+ setA);
-//     localStorage.setItem('number',setA.toString());
-//     if(localStorage.getItem('number')!==null){
-//         let num = localStorage.getItem('number');
-//         document.querySelector('.line').setAttribute('data-time',num);
-//     }
-// };
+
 // 
 document.querySelectorAll('.order').forEach((element)=>{
     element.onclick = orderFunction;
@@ -89,16 +84,12 @@ function orderFunction(){
     let second = document.querySelector('.order[value="second"]');
     // console.log(this.value);
     if(this.value == "first"){
-        trans();
         block.style.display = 'flex';
         block2.style.display = 'none';
-        return true;
     }
     if(this.value == "second"){
-        trans();
         block2.style.display = 'flex';
         block.style.display = 'none';
-        return true;
     }
 }
 document.querySelectorAll('.span_name').forEach((span_name)=>{
@@ -317,3 +308,4 @@ sherlok.addEventListener('click',()=>{
     statistics.innerHTML = sherlokbg;
     cross();
 });
+};

@@ -30,6 +30,50 @@ html[data-theme='dark']{
   --stat-color:#333333;
   --back-dl:rgba(0,0,0,0.7);
 }
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: all 0.2s !important;
+}
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+.preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 999;
+  transition: 1s all;
+  opacity: 1;
+  visibility: visible;
+}
+.preloader .loader {
+  width: 100px;
+  height: 100px;
+  border: 10px solid #fff;
+  opacity: 0.8;
+  border-radius: 50%;
+  border-top-color: blue;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  animation: 1s spin infinite linear;
+}
+.preloader.done {
+  opacity: 0;
+  visibility: hidden;
+}
 .back{
   width: 100%;
   height: 100%;
@@ -51,9 +95,10 @@ html[data-theme='dark']{
   height: 40px;
   border-radius: 5px;
   background-color: var(--color-headings);
+  transition: 0.3s ease-in-out;
 }
 .scroll:hover{
-  color: var(--hover-color);
+  color: #000;
 }
 .back img{
   position: absolute;
@@ -98,7 +143,7 @@ html[data-theme='dark']{
 	background: grey;
 	float: right;
 	border-radius: 100px;
-	position: relative;
+  position: relative;
 }
 
 .dark_light label:after {
@@ -109,16 +154,17 @@ html[data-theme='dark']{
 	width: 20px;
 	height: 20px;
 	background: #fff;
-	border-radius: 90px;
+  border-radius: 90px;
+  transition: 0.5s ease-in-out;
 }
-
 .dark_light input:checked + label {
-	background: var(--color-headings);
+  background: var(--color-headings);
 }
 
 .dark_light input:checked + label:after {
 	left: calc(100% - 5px);
-	transform: translateX(-100%);
+  transform: translateX(-100%);
+  transition: 0.5s ease-in-out;
 }
 /* face */
 .box input[type="radio"]{
@@ -145,6 +191,25 @@ html[data-theme='dark']{
 .box input[type="radio"]:checked + label::before{
   background-image: url('../correct.png');
   background-size: 100%;
+  animation: correct 0.5s ease-in-out;
+
+}
+@keyframes correct{
+  0%{
+    transform:  rotate(0deg);
+  }
+  30%{
+    transform:  rotate(50deg);
+  }
+  45%{
+    transform:  rotate(80deg);
+  }
+  60%{
+    transform:  rotate(50deg);
+  }
+  100%{
+    transform:  rotate(0deg);
+  }
 }
 .leader {
   margin-top: 10px;
@@ -239,6 +304,10 @@ html[data-theme='dark']{
   height: 30px;
   cursor: pointer;
   filter: var(--fil);
+  transition: 0.5s ease-in-out;
+}
+.close:hover{
+  transform: rotate(180deg);
 }
 .name {
   display: flex;
@@ -276,8 +345,8 @@ html[data-theme='dark']{
   align-items: center;
   font-family: "Libre Franklin", sans-serif;
 }
-.main .block2 {
-  margin-top: 70px;
+.main .second_face {
+  margin-top: 120px;
   width: 50%;
   height: 100%;
   display: flex;
@@ -306,6 +375,9 @@ html[data-theme='dark']{
   border-radius: 3px;
   cursor: pointer;
 }
+.line:last-child{
+  margin-bottom: 100px;
+}
 .line:before {
   content: attr(data-time) "";
   padding: 13px;
@@ -314,7 +386,6 @@ html[data-theme='dark']{
   position: absolute;
   left: 5px;
   color: var(--line-text);
-
 } 
 .main .line:hover::before,.line:hover{
   color: var(--hover-color);
