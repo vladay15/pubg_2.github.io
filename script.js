@@ -39,10 +39,10 @@ var checkbox = document.querySelector('input[name=theme]');
 
 checkbox.addEventListener('change', function() {
     if(this.checked) {
-        trans();
+        // trans();
         document.documentElement.setAttribute('data-theme', 'dark');
     } else {
-        trans();
+        // trans();
         document.documentElement.setAttribute('data-theme', 'light');
     }
 });
