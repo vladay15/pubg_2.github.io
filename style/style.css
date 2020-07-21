@@ -261,7 +261,6 @@ html.transition *:after {
   flex-wrap: wrap;
   box-shadow: 0 0 20px #71c9ce;
   animation: c 5s ease-in-out infinite;
-  transition: 0.5s ease-in-out;
 }
 @keyframes c{
   0%{
