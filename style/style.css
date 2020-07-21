@@ -241,6 +241,7 @@ html.transition *:after {
   padding: 5px;
   color: var(--line-text);
   background-color: var(--line);
+  transition: 0.5s ease-in-out;
 }
 
 /* statistics */
@@ -260,6 +261,7 @@ html.transition *:after {
   flex-wrap: wrap;
   box-shadow: 0 0 20px #71c9ce;
   animation: c 5s ease-in-out infinite;
+  transition: 0.5s ease-in-out;
 }
 @keyframes c{
   0%{
@@ -375,6 +377,7 @@ html.transition *:after {
   overflow: hidden;
   border-radius: 3px;
   cursor: pointer;
+  transition: 0.5s ease-in-out;
 }
 .line:last-child{
   margin-bottom: 100px;
