@@ -79,6 +79,7 @@ document.querySelectorAll('.order').forEach((element)=>{
 });
 let block = document.querySelector('.block');
 let block2 = document.querySelector('.block2');
+let search_none = document.querySelector('.search');
 function orderFunction(){
     let first = document.querySelector('.order[value="first"]');
     let second = document.querySelector('.order[value="second"]');
@@ -100,6 +101,7 @@ function spanFunc(){
     box.style.display = 'none';
     block.style.display = 'none';
     block2.style.display = 'none';
+    search_none.style.display = 'none';
 }
 function cross(){
     let close = document.querySelector('.close');
@@ -107,6 +109,7 @@ function cross(){
         statistics.style.display = 'none';
         box.style.display = 'flex';
         block.style.display = 'flex';
+        search_none.style.display = 'flex';
     });
 }
 let kr7 = document.querySelector('.kr7');
