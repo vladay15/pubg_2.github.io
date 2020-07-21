@@ -256,6 +256,7 @@ html.transition *:after {
   border-radius: 5px;
   width: 80%;
   padding: 20px;
+  padding-bottom: 50px;
   min-height: 400px;
   /* height: 85%; */
   flex-wrap: wrap;
