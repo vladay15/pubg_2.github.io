@@ -34,7 +34,8 @@ html.transition,
 html.transition *,
 html.transition *:before,
 html.transition *:after {
-  transition: all 0.2s !important;
+  will-change: transition;
+  transition: 0.2s ease-in-out !important;
 }
 @keyframes spin {
   from {
